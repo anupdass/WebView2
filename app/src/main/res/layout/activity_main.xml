@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBar"
+        android:progress="50"
+        android:layout_marginTop="-3dp"
+        android:visibility="gone"
+        />
+
+    <WebView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:id="@+id/webView"
+        />
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/no_connection"
+            android:id="@+id/noConnection"
+            android:layout_centerInParent="true"
+            />
+        <Button
+            android:onClick="retry"
+            android:id="@+id/retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/noConnection"
+            android:layout_centerInParent="true"
+            android:background="@color/colorPrimary"
+            android:text="Retry"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
